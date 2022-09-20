@@ -10,10 +10,13 @@ export function helloWorld(_options: Schema): Rule {
 
     const sourceTemplates = url('./files');
 
+    console.log(sourceTemplates);
+    
+
     const sourceParameterizedTemplates = apply(sourceTemplates, [
       template({
         ..._options,
-        ...strings
+        ...strings 
       })
     ])
 
