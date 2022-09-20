@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "hello-wOrld",
+    "title": "Hello world component tutke",
+    "type": "object",
+    "description": "haai kuch toh",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the person",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            },
+            "x-prompt": "Who do we love?"
+        },
+        "type": {
+            "type": "string",
+            "description": "type of type of type of type",
+            "$default": {
+                "$source": "argv",
+                "index": 1
+            },
+            "x-prompt": "What is type of the type?"
+        }
+    },
+    "required": ["name", "type"]
+}
